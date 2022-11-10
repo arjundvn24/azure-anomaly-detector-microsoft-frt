@@ -2,32 +2,32 @@
 # coding: utf-8
 
 
-import pandas as pd
-import numpy as np
 #visualisation
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
 get_ipython().run_line_magic('matplotlib', 'inline')
-import seaborn as sns
 #EDA
 from collections import Counter
+
 import pandas_profiling as pp
-# data preprocessing
-from sklearn.preprocessing import StandardScaler
-# data splitting
-from sklearn.model_selection import train_test_split
-# data modeling
-from sklearn.metrics import confusion_matrix,accuracy_score,roc_curve,classification_report
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import GaussianNB
-from xgboost import XGBClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import SVC
 #ensembling
 from mlxtend.classifier import StackingCVClassifier
-
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+# data modeling
+from sklearn.metrics import (accuracy_score, classification_report,
+                             confusion_matrix, roc_curve)
+# data splitting
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+# data preprocessing
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from xgboost import XGBClassifier
 
 # In[2]:
 
@@ -217,6 +217,7 @@ plt.show()
 
 
 import pickle
+
 pickle.dump(svc, open('model.pkl', 'wb'))
 model = pickle.load(open('model.pkl', 'rb'))
 print(model)
