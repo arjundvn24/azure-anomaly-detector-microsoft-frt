@@ -2,8 +2,6 @@
 # coding: utf-8
 
 
-
-#loading dataset
 import pandas as pd
 import numpy as np
 #visualisation
